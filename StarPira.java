@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class StarPira {
 	
-	static void spria(int n) {
+	static void spira(int n) {
 		
 		for(int i=1; i<=n; i++) {
 			for(int j=1; j<=n-i;j++) {
@@ -23,7 +23,7 @@ public class StarPira {
 	}
 	
 	
-	static void spria3(int n) {
+	static void spira3(int n) {
 		for(int i=1; i<=n; i++) {
 			for(int j=1; j<=n-i; j++) {
 				System.out.print(" ");
@@ -36,7 +36,7 @@ public class StarPira {
 	}
 
 	
-	static void spria1(int n) {
+	static void spira1(int n) {
 		
 		int lineCount = n;  //라인 수
 		int starCount = 1; //처음 별의 갯수
@@ -64,6 +64,34 @@ public class StarPira {
 		
 	}
 	
+	static void npira(int n) {//숫자 피라미드
+		for(int i=1; i<=n; i++) {
+			for(int j=1; j<=n-i; j++) {
+				System.out.print(" ");
+			}
+			for(int j=1; j<=i*2-1; j++) {
+				System.out.print(i);
+			}
+			System.out.println();
+		}
+	}
+	
+	
+	
+	
+	static void npira2(int n) {//숫자 피라미드
+		for(int i=1; i<=n; i++) {
+			for(int j=1; j<=n-i; j++) {
+				System.out.print(" ");
+			}
+			for(int j=1; j<=(i-1)*2+1; j++) {
+				System.out.print(i%10);
+			}
+			System.out.println();
+		}
+	}
+	
+	
 	public static void main(String[] args) {
 		
 		Scanner scanner = new Scanner(System.in);
@@ -79,9 +107,12 @@ public class StarPira {
 		}while(n<=0);
 		
 		
-		//spria(n);
-		//spria1(n);
-		spria3(n);
+		//spira(n);
+		//spira1(n);
+		//spira3(n);
+		
+		//npira(n);
+		npira2(n);
 		
 	}	
 	
